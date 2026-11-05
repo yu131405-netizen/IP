@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f5e9">
+  <title>生活资料库 · 阿腾的生活漫游记</title>
+  <meta name="description" content="收好照片、视频和文件，用日期、地点或关键词找回珍贵的回忆。">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="library.css"><script src="library.js" defer></script>
+</head>
+<body><div class="page-shell library-page">
+  <header class="topbar library-topbar">
+    <a href="index.html" class="brand" aria-label="回到首页"><span class="brand-mark">腾</span><span>阿腾的生活漫游记<small>ATENG'S LITTLE WORLD</small></span></a>
+    <nav class="library-nav" aria-label="主导航"><a href="index.html">首页</a><a href="journey.html">生活足迹</a><a href="library.html" aria-current="page">资料库</a><a href="add.html">记录生活</a></nav>
+    <a class="header-button library-header-add" href="add.html"><span>✳</span> 记录新经历</a>
+  </header>
+  <main>
+    <section class="library-hero"><div><p class="library-eyebrow">A LITTLE COLLECTION OF LIFE <span>✳</span></p><p class="library-script">把回忆好好收起来 ♡</p><h1>生活资料库<span>✳</span></h1><p class="library-lead">照片、视频和那些舍不得丢的文件，<br>都可以在这里找到自己的小角落。</p><button class="library-button" id="open-upload" type="button">＋ &nbsp; 收进新回忆 <span>↗</span></button></div><div class="library-art" aria-hidden="true"><div class="art-card art-card-one">✿<small>little<br>moments</small></div><div class="art-card art-card-two"><span>☀</span><i>MEMORIES</i></div><div class="library-mascot"><span>✿</span><div>•ᴗ•</div><small>我的宝藏！</small></div><b>✧</b></div></section>
+    <section class="library-content"><div class="library-heading"><div><p class="library-eyebrow">YOUR MEMORY BOX <span>✳</span></p><h2>我的收藏 <span>/ 慢慢积攒的美好</span></h2><p>用关键词、地点或日期，找回某个瞬间。</p></div><span id="collection-count" class="collection-count">0 份收藏</span></div>
+      <div class="library-toolbar"><div class="category-tabs" role="group" aria-label="资料类型"><button type="button" class="active" data-category="all" aria-pressed="true">全部 <span>✳</span></button><button type="button" data-category="image" aria-pressed="false">图片</button><button type="button" data-category="video" aria-pressed="false">视频</button><button type="button" data-category="document" aria-pressed="false">文件</button></div><div class="library-search"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索关键词或地点</span><input id="search" type="search" placeholder="搜索关键词、地点或日期"></label><label class="date-box"><span class="sr-only">按日期筛选</span><input id="date-filter" type="date" aria-label="按日期筛选"></label><button type="button" class="clear-filter" id="clear-filter">清除</button></div></div>
+      <p class="storage-note">✳ &nbsp;收藏保存在当前设备的浏览器中，清除浏览器数据后可能丢失；暂不支持跨设备同步。</p>
+      <p class="library-message" id="message" role="status" aria-live="polite"></p><div id="items" class="library-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state"><div class="empty-illustration">✿<span>•ᴗ•</span></div><h3>这里还空空的</h3><p>给回忆找个家，从收藏第一份资料开始吧。</p><button type="button" class="empty-upload" id="empty-upload">＋ 添加第一份收藏</button></div>
+    </section>
+  </main>
+  <footer class="library-footer"><a href="index.html" class="footer-brand">阿腾的生活漫游记 <span>✳</span></a><p>把生活里的闪光，收进小小的宝盒。</p><span>COLLECT LITTLE JOYS</span><a href="index.html">回到首页 ↗</a></footer>
+</div>
+<dialog id="upload-dialog" class="library-dialog"><div class="dialog-inner"><button type="button" class="dialog-close" data-close aria-label="关闭">×</button><p class="library-eyebrow">ADD A LITTLE MEMORY ✳</p><h2>收进新回忆</h2><p class="dialog-description">照片、视频或文件，都值得被妥善收藏。</p><form id="upload-form"><label class="file-picker"><span>✳</span><strong>选择想收藏的文件</strong><small>支持一次选择多个文件</small><input type="file" name="files" id="files" multiple required></label><p id="file-selection" class="file-selection">还没有选择文件</p><label>标题或关键词 <input name="title" maxlength="100" placeholder="例如：深圳的第一个家（可不填）"></label><div class="form-row"><label>地点 <input name="location" maxlength="100" placeholder="例如：深圳"></label><label>日期 <input name="date" type="date"></label></div><p class="form-hint">同批文件使用相同的关键词、地点和日期；文件保存在当前浏览器。</p><p id="upload-error" class="library-message" role="alert"></p><button type="submit" class="library-button upload-submit">收藏起来 <span>✳</span></button></form></div></dialog>
+<dialog id="preview-dialog" class="library-dialog preview-dialog"><div class="dialog-inner"><button type="button" class="dialog-close" data-close aria-label="关闭">×</button><p class="library-eyebrow">A LITTLE MEMORY ✳</p><h2 id="preview-title"></h2><p id="preview-meta" class="preview-meta"></p><div id="preview-content" class="preview-content"></div><div class="preview-actions"><a id="download-link" class="library-button" download>保存文件 ↓</a><button type="button" id="delete-item" class="delete-item">删除这份收藏</button></div></div></dialog>
+</body></html>
