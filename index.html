@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5e9">
+  <title>阿腾的生活漫游记</title>
+  <meta name="description" content="阿腾的人生经历，一点一点，慢慢记录。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true"><symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 1c.8 6.4 3.6 9.2 10 10-6.4.8-9.2 3.6-10 10C11.2 14.6 8.4 11.8 2 11 8.4 10.2 11.2 7.4 12 1Z"/></symbol></svg>
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="#top" class="brand" aria-label="阿腾的生活漫游记，回到首页"><span class="brand-mark">腾</span><span>阿腾的生活漫游记<small>ATENG'S LITTLE WORLD</small></span></a>
+      <nav class="topnav" aria-label="主导航"><a href="#story">我的故事</a><a href="#journey">生活足迹</a><button type="button" data-action="about">关于这里</button></nav>
+      <button class="header-button" data-action="add" type="button"><span>✳</span> 记录新经历</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="story">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> WELCOME TO MY LITTLE WORLD <span class="line"></span></div>
+          <p class="handwritten hello">嗨，我是阿腾 <span>✳</span></p>
+          <h1>人生的故事，<br><em>正在慢慢展开。</em></h1>
+          <p class="hero-description">把走过的路、遇见的人，和每一个值得纪念的日子，<br class="desktop-only">都轻轻收进这个小小的世界里。</p>
+          <div class="hero-actions"><a class="primary-button" href="#journey">来看看我的故事 <span>↗</span></a><span class="hero-note">从这里开始漫游 <span>↝</span></span></div>
+        </div>
+        <div class="hero-art" aria-label="深圳城市风景插画"><div class="art-image"></div><div class="sun"></div><div class="art-stamp"><span>HELLO,</span><strong>深圳</strong><small>A NEW CHAPTER</small></div><div class="art-caption"><span>✳</span> 把平凡的日子，过成喜欢的样子。</div><div class="photo-corner">✦</div></div>
+        <div class="hero-number">01 / 生活正在发生</div>
+      </section>
+
+      <section class="friends-section" aria-labelledby="friends-title">
+        <div class="friends-intro"><p class="mini-label">YOUR LITTLE GUIDES <span>✳</span></p><h2 id="friends-title">和小精灵一起<br><em>探索吧！</em></h2><p>把鼠标放在小精灵身上，<br>看看它们想带你去哪里。</p><span class="curved-arrow">⤷</span></div>
+        <div class="friends" aria-label="小精灵导航">
+          <button class="friend friend-peach" type="button" data-scroll="story" aria-label="小精灵：我的故事"><span class="sign">我的故事</span><span class="sprite"><span class="sprout">❋</span><span class="face"><i></i><i></i><b>ᴗ</b></span><span class="arm arm-l"></span><span class="arm arm-r"></span><span class="feet">••</span></span><span class="friend-label"><strong>我的故事</strong><small>ABOUT ME</small></span></button>
+          <button class="friend friend-green" type="button" data-scroll="journey" aria-label="小精灵：生活足迹"><span class="sign">生活足迹</span><span class="sprite"><span class="sprout">✿</span><span class="face"><i></i><i></i><b>ᴗ</b></span><span class="arm arm-l"></span><span class="arm arm-r"></span><span class="feet">••</span></span><span class="friend-label"><strong>生活足迹</strong><small>MY JOURNEY</small></span></button>
+          <button class="friend friend-yellow" type="button" data-action="add" aria-label="小精灵：记录生活"><span class="sign">记录生活</span><span class="sprite"><span class="sprout">✳</span><span class="face"><i></i><i></i><b>ᴗ</b></span><span class="arm arm-l"></span><span class="arm arm-r"></span><span class="feet">••</span></span><span class="friend-label"><strong>记录生活</strong><small>NEW MEMORY</small></span></button>
+          <button class="friend friend-lilac" type="button" data-action="about" aria-label="小精灵：关于这里"><span class="sign">关于这里</span><span class="sprite"><span class="sprout">✦</span><span class="face"><i></i><i></i><b>ᴗ</b></span><span class="arm arm-l"></span><span class="arm arm-r"></span><span class="feet">••</span></span><span class="friend-label"><strong>关于这里</strong><small>THIS PLACE</small></span></button>
+        </div>
+        <div class="friends-doodle">✳ <span>little<br>friends!</span></div>
+      </section>
+
+      <section class="journey-section" id="journey">
+        <div class="section-heading"><div><p class="mini-label">LITTLE MOMENTS, BIG MEMORIES <span>✳</span></p><h2>生活足迹 <span class="heading-scribble">/ 一步一步，都是成长</span></h2><p>每一段经历，都是独一无二的收藏。</p></div><button type="button" class="text-button" data-action="add">添加新故事 <span>↗</span></button></div>
+        <div class="story-card">
+          <div class="date-column"><span class="date-month">OCT.</span><strong>10<span>月</span></strong><span class="date-line"></span><small>一个新的开始</small></div>
+          <div class="story-content"><div class="story-meta"><span class="tag">新的篇章</span><span>✳ &nbsp; 深圳，中国</span></div><h3>你好，深圳。<br><em>你好，新的生活。</em></h3><p>十月，我第一次来到深圳讨生活。6号开始第一天上班，租了一间房子，也就这样，开启了人生的新阶段。</p><p>我的奥德赛时期好像还挺短的。22岁，已经步入社会，开始过上比较稳定的生活。前方还有很多未知，但没关系，就一边生活，一边慢慢探索吧。</p><div class="story-footer"><span>✦ &nbsp; 第一次来到深圳</span><span>✦ &nbsp; 第一份新生活</span></div></div>
+          <div class="story-visual"><div class="mini-photo"></div><div class="tape"></div><div class="visual-note handwritten">新生活，请多关照！<span>♡</span></div><span class="visual-star">✳</span></div>
+        </div>
+        <div id="entry-list" class="entry-list" aria-live="polite"></div>
+        <div class="more-note" id="empty-note"><span>✧</span> 后面的故事，还在发生中 <span>✧</span></div>
+      </section>
+      <section class="closing"><span class="closing-flower">✿</span><p class="handwritten">生活不必赶路，<br>每一步都算数。</p><span class="closing-en">TAKE YOUR TIME, ENJOY THE JOURNEY.</span><button type="button" data-action="add">写下下一个故事 <span>↗</span></button></section>
+    </main>
+    <footer><a href="#top" class="footer-brand">阿腾的生活漫游记 <span>✳</span></a><p>记录生活，也记录成为自己的过程。</p><span>MADE WITH ♡ FOR LIFE</span><a href="#top">回到顶部 ↑</a></footer>
+  </div>
+  <dialog id="entry-dialog"><div class="dialog-inner"><button class="dialog-close" type="button" data-close-dialog aria-label="关闭">×</button><p class="mini-label">A NEW LITTLE MEMORY ✳</p><h2>写下新的故事</h2><p class="dialog-description">不管是大事还是小事，都值得被记住。</p><form id="entry-form"><label>故事标题<input name="title" required maxlength="80" placeholder="给这段经历起个名字"></label><div class="form-row"><label>日期<input type="date" name="date"></label><label>地点<input name="location" maxlength="60" placeholder="故事发生在哪里"></label></div><label>这段经历<textarea name="content" required maxlength="3000" rows="5" placeholder="写下想记录的事情和心情……"></textarea></label><p class="form-hint">故事会保存在当前浏览器中。</p><button class="primary-button submit-button" type="submit">收藏这段故事 <span>✳</span></button></form></div></dialog>
+  <dialog id="about-dialog"><div class="dialog-inner"><button class="dialog-close" type="button" data-close-dialog aria-label="关闭">×</button><p class="mini-label">ABOUT THIS LITTLE WORLD ✳</p><h2>关于这个小世界</h2><p class="about-copy">这里是阿腾的生活漫游记。从来到深圳的那个十月开始，记录生活里的第一次、那些小小的感受，还有未来会遇见的一切。</p><p class="about-copy">故事不用一次写完，日子会慢慢给出答案。</p><button class="primary-button" type="button" data-close-dialog>继续漫游 <span>↗</span></button></div></dialog>
+</body>
+</html>
